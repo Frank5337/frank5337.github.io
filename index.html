@@ -45,7 +45,7 @@
         <div class="container">
             <div class="collection-title">
                 <h1 class="collection-header" id="site-description">
-                    我的博客
+                    My Blos
                 </h1>
                 <div class="collection-info">
                     
@@ -197,7 +197,7 @@
             var handleGithub = function(){
                 var popularContainer = $(".popular-container");
 
-                var repos = "zbl5337.github.io".split(",");
+                var repos = "hexo-theme-primer".split(",");
                 for(var i in repos){
                     var name = repos[i];
                     $.get("https://api.github.com/repos/zbl5337/"+name,handle);
