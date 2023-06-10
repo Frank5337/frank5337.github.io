@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "My Awsome Project"
-  text: "A VitePress Site"
+  text: "A VitePress Site For Franklin"
   tagline: My great project tagline
   actions:
     - theme: brand
