@@ -2,7 +2,7 @@
 .vscode/
 
 node_modules/
-.vitepress/.cache/
-.vitepress/cache/
-.vitepress/.temp/
-.vitepress/dist/
+docs/.vitepress/.cache/
+docs/.vitepress/cache/
+docs/.vitepress/.temp/
+docs/.vitepress/dist/
