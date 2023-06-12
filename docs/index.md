@@ -17,9 +17,11 @@ hero:
 features:
   - title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /src/index.md
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: 病故支离纱帽宽
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /illness/2022-12-22-illness.md
 ---
 
