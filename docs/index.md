@@ -22,6 +22,6 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: 病故支离纱帽宽
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /illness/2022-12-22-illness.md
+    link: /disease/
 ---
 
