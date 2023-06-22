@@ -11,6 +11,7 @@ export default defineConfig({
         nav: [
             // { text: 'Home', link: '/' },
             {text: 'Disease', link: '/disease'},
+            {text: 'Series', link: '/series/series'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
