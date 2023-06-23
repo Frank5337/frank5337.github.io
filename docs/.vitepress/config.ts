@@ -2,16 +2,18 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "My Awsome Project",
-    description: "A VitePress Site",
+    title: "Franklin 's World",
+    titleTemplate: 'Custom Suffix',
+    description: "难寻少年时, 总有少年来",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
 
         //顶部导航栏
         nav: [
             // { text: 'Home', link: '/' },
-            {text: 'Disease', link: '/disease'},
-            {text: 'Series', link: '/series/series'},
+            {text: '病痛', link: '/disease/'},
+            {text: '美剧', link: '/series/series'},
+            {text: '面试', link: '/interview/interview'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
