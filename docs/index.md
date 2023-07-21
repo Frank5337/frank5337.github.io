@@ -17,7 +17,7 @@ hero:
 features:
   - title: 面试
     details: What does not kill me, make me stronger
-    link: /interview/interview
+    link: /interview/java
   - title: 去哪玩
     details: where when who
     link: /play/index
