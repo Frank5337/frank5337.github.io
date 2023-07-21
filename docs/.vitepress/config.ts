@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
+// https://vitepress.dev
 export default defineConfig({
     title: "Franklin 's World",
     titleTemplate: 'Custom Suffix',
@@ -11,7 +11,7 @@ export default defineConfig({
         //顶部导航栏
         nav: [
             // { text: 'Home', link: '/' },
-            {text: '病痛', link: '/disease/'},
+            {text: '病痛', link: '/disease/2022-12-22-disease'},
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/interview'},
             // { text: 'Examples', link: '/markdown-examples' }
@@ -29,9 +29,10 @@ export default defineConfig({
                     //     ]
                     // },
                     {
-                        text: 'Disease',
+                        text: '病骨支离纱帽宽',
                         items: [
-                            {text: 'Disease 2022-12-20 是新冠', link: '/disease/2022-12-22-disease'},
+                            {text: '2022-12-20 是新冠', link: '/disease/2022-12-22-disease'},
+                            {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8-disease'},
                         ]
                     }
                 ],
