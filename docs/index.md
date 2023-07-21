@@ -19,7 +19,7 @@ features:
     details: What does not kill me, make me stronger
     link: /interview/interview
   - title: 去哪玩
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: where when who
     link: /play/index
   - title: 病故支离纱帽宽
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
