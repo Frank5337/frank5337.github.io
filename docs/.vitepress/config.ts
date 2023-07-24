@@ -19,10 +19,12 @@ const sidebarInterview = () => [
 ]
 
 // @ts-ignore
+// @ts-ignore
 export default defineConfig({
     title: "Franklin 's World",
     titleTemplate: 'Custom Suffix',
     description: "难寻少年时, 总有少年来",
+    lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
 
@@ -70,13 +72,12 @@ export default defineConfig({
             text: '在 Github 编辑',
         },
 
-        lastUpdatedText: '上次更新',
-
         docFooter: {
             prev: '上一页',
             next: '下一页'
         },
 
+        lastUpdatedText: '上次更新',
 
         outline: {label: '本页内容'},
 
