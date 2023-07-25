@@ -11,11 +11,11 @@ const sidebarInterview = () => [
     //         { text: '公务员区别', link: '/career/certificate/gwy-diff' },
     //     ]
     // }
-    { text: 'Java', link: '/interview/java'},
-    { text: 'Mysql', link: '/interview/mysql'},
-    { text: 'Redis', link: '/interview/redis'},
-    { text: 'Spring', link: '/interview/spring'},
-    { text: 'Message Queue', link: '/interview/mq'}
+    {text: 'Java', link: '/interview/java'},
+    {text: 'Mysql', link: '/interview/mysql'},
+    {text: 'Redis', link: '/interview/redis'},
+    {text: 'Spring', link: '/interview/spring'},
+    {text: 'Message Queue', link: '/interview/mq'}
 ]
 
 // @ts-ignore
@@ -57,7 +57,7 @@ export default defineConfig({
                         ]
                     }
                 ],
-                '/interview/' : sidebarInterview(),
+                '/interview/': sidebarInterview(),
 
             },
 
@@ -83,60 +83,62 @@ export default defineConfig({
             next: '下一页'
         },
 
-        lastUpdatedText: '上次更新',
+        lastUpdated: {text: '上次更新'},
 
         outline: {label: '本页内容'},
 
-        // algolia: {
-        //     appId: 'TMOT9B7BHV',
-        //     apiKey: '8870d1a7427df92c33d2db21368d01d1',
-        //     indexName: 'augusmeowio',
-        //     placeholder: '搜索',
-        //     translations: {
-        //         button: {
-        //             buttonText: '搜索',
-        //             buttonAriaLabel: '搜索'
-        //         },
-        //         modal: {
-        //             searchBox: {
-        //                 resetButtonTitle: '清除查询条件',
-        //                 resetButtonAriaLabel: '清除查询条件',
-        //                 cancelButtonText: '取消',
-        //                 cancelButtonAriaLabel: '取消'
-        //             },
-        //             startScreen: {
-        //                 recentSearchesTitle: '搜索历史',
-        //                 noRecentSearchesText: '没有搜索历史',
-        //                 saveRecentSearchButtonTitle: '保存至搜索历史',
-        //                 removeRecentSearchButtonTitle: '从搜索历史中移除',
-        //                 favoriteSearchesTitle: '收藏',
-        //                 removeFavoriteSearchButtonTitle: '从收藏中移除'
-        //             },
-        //             errorScreen: {
-        //                 titleText: '无法获取结果',
-        //                 helpText: '你可能需要检查你的网络连接'
-        //             },
-        //             footer: {
-        //                 selectText: '选择',
-        //                 navigateText: '切换',
-        //                 closeText: '关闭',
-        //                 searchByText: '搜索提供者'
-        //             },
-        //             noResultsScreen: {
-        //                 noResultsText: '无法找到相关结果',
-        //                 suggestedQueryText: '你可以尝试查询',
-        //                 reportMissingResultsText: '你认为该查询应该有结果？',
-        //                 reportMissingResultsLinkText: '点击反馈'
-        //             }
-        //         }
-        //     }
-        // }
-    // },
+        search: {
+            provider: 'algolia',
+            options: {
+                appId: 'WSCVCLA6FX',
+                apiKey: '49f64eb45d355f9da164a0e007e0982c',
+                indexName: 'franklin',
+                placeholder: '搜索',
+                translations: {
+                    button: {
+                        buttonText: '搜索',
+                        buttonAriaLabel: '搜索'
+                    },
+                    modal: {
+                        searchBox: {
+                            resetButtonTitle: '清除查询条件',
+                            resetButtonAriaLabel: '清除查询条件',
+                            cancelButtonText: '取消',
+                            cancelButtonAriaLabel: '取消'
+                        },
+                        startScreen: {
+                            recentSearchesTitle: '搜索历史',
+                            noRecentSearchesText: '没有搜索历史',
+                            saveRecentSearchButtonTitle: '保存至搜索历史',
+                            removeRecentSearchButtonTitle: '从搜索历史中移除',
+                            favoriteSearchesTitle: '收藏',
+                            removeFavoriteSearchButtonTitle: '从收藏中移除'
+                        },
+                        errorScreen: {
+                            titleText: '无法获取结果',
+                            helpText: '你可能需要检查你的网络连接'
+                        },
+                        footer: {
+                            selectText: '选择',
+                            navigateText: '切换',
+                            closeText: '关闭',
+                            searchByText: '搜索提供者'
+                        },
+                        noResultsScreen: {
+                            noResultsText: '无法找到相关结果',
+                            suggestedQueryText: '你可以尝试查询',
+                            reportMissingResultsText: '你认为该查询应该有结果？',
+                            reportMissingResultsLinkText: '点击反馈'
+                        }
+                    }
+                }
+            }
+        },
 
     }
 })
 
 //todo
 export const sidebar = {
-    '/interview' : sidebarInterview(),
+    '/interview': sidebarInterview(),
 }
