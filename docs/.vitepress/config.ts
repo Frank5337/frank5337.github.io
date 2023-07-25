@@ -34,6 +34,7 @@ export default defineConfig({
             {text: '病痛', link: '/disease/2022-12-22-disease'},
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/java'},
+            {text: '足球', link: '/soccer/'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
@@ -70,6 +71,11 @@ export default defineConfig({
         editLink: {
             pattern: 'https://github.com/Frank5337/frank5337.github.io/blob/master/docs/:path',
             text: '在 Github 编辑',
+        },
+
+        footer: {
+            message: '努力工作 享受生活',
+            copyright: 'Copyright © 2022-present Franklin'
         },
 
         docFooter: {
