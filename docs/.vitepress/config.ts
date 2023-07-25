@@ -92,7 +92,7 @@ export default defineConfig({
             options: {
                 appId: 'WSCVCLA6FX',
                 apiKey: '49f64eb45d355f9da164a0e007e0982c',
-                indexName: 'franklin',
+                indexName: 'frank5337io',
                 placeholder: '搜索',
                 translations: {
                     button: {
