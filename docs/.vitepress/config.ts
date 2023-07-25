@@ -90,8 +90,8 @@ export default defineConfig({
         search: {
             provider: 'algolia',
             options: {
-                appId: 'WSCVCLA6FX',
-                apiKey: '49f64eb45d355f9da164a0e007e0982c',
+                appId: 'QRRJFWKYC6',
+                apiKey: '738cba2eb19ec7aacce4ddf34f2b44a1',
                 indexName: 'frank5337io',
                 placeholder: '搜索',
                 translations: {
