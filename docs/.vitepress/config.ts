@@ -35,6 +35,8 @@ export default defineConfig({
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/java'},
             {text: '足球', link: '/soccer/'},
+            {text: '专题', link: '/subject/'},
+            {text: '装修', link: '/fitment/'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
