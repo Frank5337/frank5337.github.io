@@ -21,8 +21,8 @@ const sidebarInterview = () => [
 // @ts-ignore
 // @ts-ignore
 export default defineConfig({
-    title: "Franklin 's World",
-    titleTemplate: 'Custom Suffix',
+    title: "Franklin's World",
+    // titleTemplate: 'Custom Suffix',
     description: "难寻少年时, 总有少年来",
     lastUpdated: true,
     themeConfig: {

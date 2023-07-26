@@ -1,4 +1,4 @@
-### Redis
+# Redis
 - Cluster模式, 数据倾斜问题
 - 哨兵模式, 脑裂
 - 如何用redis的setnx命令实现一个可重入锁

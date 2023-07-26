@@ -1,6 +1,8 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: Franklin's World
+titleTemplate: 努力工作 享受生活
 
 hero:
   name: "Franklin 's World"
