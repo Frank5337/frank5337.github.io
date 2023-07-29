@@ -37,6 +37,7 @@ export default defineConfig({
             {text: '足球', link: '/soccer/'},
             {text: '专题', link: '/subject/'},
             {text: '装修', link: '/fitment/'},
+            {text: '毒鸡汤', link: '/pcs/'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
