@@ -32,11 +32,11 @@ export default defineConfig({
         //顶部导航栏
         nav: [
             // { text: 'Home', link: '/' },
-            {text: '病痛', link: '/disease/2022-12-22-disease'},
+            {text: '病痛', link: '/disease/2022-12-22'},
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/java'},
-            {text: '足球', link: '/soccer/'},
-            {text: '专题', link: '/subject/'},
+            // {text: '足球', link: '/soccer/'},
+            // {text: '专题', link: '/subject/'},
             // {text: '装修', link: '/fitment/'},
             // {text: '毒鸡汤', link: '/pcs/'},
             // { text: 'Examples', link: '/markdown-examples' }
