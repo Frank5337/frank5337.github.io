@@ -15,7 +15,8 @@ const sidebarInterview = () => [
     {text: 'Mysql', link: '/interview/mysql'},
     {text: 'Redis', link: '/interview/redis'},
     {text: 'Spring', link: '/interview/spring'},
-    {text: 'Message Queue', link: '/interview/mq'}
+    {text: 'Message Queue', link: '/interview/mq'},
+    {text: 'System Design', link: '/interview/systemdesign'}
 ]
 
 // @ts-ignore
@@ -36,8 +37,8 @@ export default defineConfig({
             {text: '面试', link: '/interview/java'},
             {text: '足球', link: '/soccer/'},
             {text: '专题', link: '/subject/'},
-            {text: '装修', link: '/fitment/'},
-            {text: '毒鸡汤', link: '/pcs/'},
+            // {text: '装修', link: '/fitment/'},
+            // {text: '毒鸡汤', link: '/pcs/'},
             // { text: 'Examples', link: '/markdown-examples' }
         ],
 
@@ -55,8 +56,11 @@ export default defineConfig({
                     {
                         text: '病骨支离纱帽宽',
                         items: [
-                            {text: '2022-12-20 是新冠', link: '/disease/2022-12-22-disease'},
-                            {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8-disease'},
+                            {text: '2022-12-20 是新冠', link: '/disease/2022-12-22'},
+                            {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
+                            {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
+                            {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
+                            {text: '2023-6-8 肌腱炎', link: '/disease/2023-10-10'},
                         ]
                     }
                 ],
