@@ -60,7 +60,7 @@ export default defineConfig({
                             {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
                             {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
                             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
-                            {text: '2023-6-8 肌腱炎', link: '/disease/2023-10-10'},
+                            {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
                         ]
                     }
                 ],
