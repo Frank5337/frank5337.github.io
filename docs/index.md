@@ -25,6 +25,6 @@ features:
     link: /play/index
   - title: 病故支离纱帽宽
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /disease/2022-12-22-disease
+    link: /disease/2022-12-22
 ---
 
