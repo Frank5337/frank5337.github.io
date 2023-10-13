@@ -26,5 +26,8 @@ features:
   - title: 病故支离纱帽宽🤕
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
     link: /disease/2022-12-22
+  - title: 骑行🚴‍♀️
+    details: 无聊看书, 有病骑车
+    link: /cycling/index
 ---
 
