@@ -28,6 +28,20 @@ export default defineConfig({
     lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+         head: [
+            [
+                'script',
+                { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
+            ],
+            [
+                'script',
+                {},
+                "window.dataLayer = window.dataLayer || [];" +
+                "function gtag(){dataLayer.push(arguments);}" +
+                "gtag('js', new Date());" +
+                "gtag('config', 'G-9NWDZBRC0T');"
+            ]
+        ],
 
         //顶部导航栏
         nav: [
