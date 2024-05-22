@@ -1,3 +1,4 @@
+// @ts-ignore
 import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev
@@ -27,6 +28,19 @@ export default defineConfig({
     description: "难寻少年时, 总有少年来",
     lastUpdated: true,
     themeConfig: {
+        head: [
+            [
+                'script',
+                { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
+            ],
+            [
+                'script',
+                {},
+                "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}" +
+                "gtag('js', new Date());" +
+                "gtag('config', 'G-9NWDZBRC0T');"
+            ]
+        ],
         // https://vitepress.dev/reference/default-theme-config
 
         //顶部导航栏
@@ -141,7 +155,9 @@ export default defineConfig({
                 }
             }
         },
-
+        optimizeDeps: {
+            include: ['my-global-script-plugin']
+        }
     }
 })
 
