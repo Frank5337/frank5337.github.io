@@ -36,7 +36,8 @@ export default defineConfig({
             [
                 'script',
                 {},
-                "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}" +
+                "window.dataLayer = window.dataLayer || [];" +
+                "function gtag(){dataLayer.push(arguments);}" +
                 "gtag('js', new Date());" +
                 "gtag('config', 'G-9NWDZBRC0T');"
             ]
