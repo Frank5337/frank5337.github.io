@@ -28,20 +28,6 @@ export default defineConfig({
     description: "难寻少年时, 总有少年来",
     lastUpdated: true,
     themeConfig: {
-        head: [
-            [
-                'script',
-                { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
-            ],
-            [
-                'script',
-                {},
-                "window.dataLayer = window.dataLayer || [];" +
-                "function gtag(){dataLayer.push(arguments);}" +
-                "gtag('js', new Date());" +
-                "gtag('config', 'G-9NWDZBRC0T');"
-            ]
-        ],
         // https://vitepress.dev/reference/default-theme-config
          head: [
             [
@@ -90,6 +76,8 @@ export default defineConfig({
                             {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
                             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
                             {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
+                            {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
+                            {text: '2024-5-29 增强CT', link: '/disease/2023-5-29'},
                         ]
                     }
                 ],
