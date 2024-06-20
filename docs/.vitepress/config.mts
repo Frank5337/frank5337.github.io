@@ -77,7 +77,7 @@ export default defineConfig({
                             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
                             {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
                             {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
-                            {text: '2024-5-29 增强CT', link: '/disease/2023-5-29'},
+                            {text: '2024-5-29 增强CT', link: '/disease/2024-5-29'},
                         ]
                     }
                 ],
