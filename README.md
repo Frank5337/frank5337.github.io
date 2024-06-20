@@ -1,5 +1,5 @@
 ## My VitePress Site
 
 ```shell
-    test 
+    努力工作, 享受生活
 ```
