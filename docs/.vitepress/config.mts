@@ -27,20 +27,21 @@ export default defineConfig({
     // titleTemplate: 'Custom Suffix',
     description: "难寻少年时, 总有少年来",
     lastUpdated: true,
-    themeConfig: {
-        // https://vitepress.dev/reference/default-theme-config
-         head: [
-            [
-                'script',
-                { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
-            ],
-            [
-                'script',
-                {},
-                "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-9NWDZBRC0T');"
-            ]
-        ],
 
+    // https://vitepress.dev/reference/default-theme-config
+    head: [
+        [
+            'script',
+            { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
+        ],
+        [
+            'script',
+            {},
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-9NWDZBRC0T');"
+        ]
+    ],
+
+    themeConfig: {
         //顶部导航栏
         nav: [
             // { text: 'Home', link: '/' },
