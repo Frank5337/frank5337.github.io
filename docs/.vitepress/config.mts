@@ -45,7 +45,7 @@ export default defineConfig({
         //顶部导航栏
         nav: [
             // { text: 'Home', link: '/' },
-            {text: '病痛', link: '/disease/2022-12-22'},
+            // {text: '病痛', link: '/disease/2022-12-22'},
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/java'},
             {text: '足球', link: '/soccer/'},
@@ -62,27 +62,27 @@ export default defineConfig({
         //侧边栏
         sidebar:
             {
-                '/disease/': [
-                    // {
-                    //     text: 'Examples',
-                    //     items: [
-                    //         { text: 'Markdown Examples', link: '/markdown-examples' },
-                    //         { text: 'Runtime API Examples', link: '/api-examples' }
-                    //     ]
-                    // },
-                    {
-                        text: '病骨支离纱帽宽',
-                        items: [
-                            {text: '2022-12-20 是新冠', link: '/disease/2022-12-22'},
-                            {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
-                            {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
-                            {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
-                            {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
-                            {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
-                            {text: '2024-5-29 增强CT', link: '/disease/2024-5-29'},
-                        ]
-                    }
-                ],
+                // '/disease/': [
+                //     // {
+                //     //     text: 'Examples',
+                //     //     items: [
+                //     //         { text: 'Markdown Examples', link: '/markdown-examples' },
+                //     //         { text: 'Runtime API Examples', link: '/api-examples' }
+                //     //     ]
+                //     // },
+                //     {
+                //         text: '病骨支离纱帽宽',
+                //         items: [
+                //             {text: '2022-12-20 是新冠', link: '/disease/2022-12-22'},
+                //             {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
+                //             {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
+                //             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
+                //             {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
+                //             {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
+                //             {text: '2024-5-29 增强CT', link: '/disease/2024-5-29'},
+                //         ]
+                //     }
+                // ],
                 '/interview/': sidebarInterview(),
 
             },

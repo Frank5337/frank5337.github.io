@@ -5,4 +5,5 @@
 - BeanFactory 和 FactoryBean 有什么区别
 
 # SpringBoot
+- @SpringBootApplication
 - 自动装配原理
