@@ -7,7 +7,7 @@ titleTemplate: 努力工作 享受生活
 hero:
   name: "Franklin 's World"
   text: "难寻少年时,总有少年来"
-  tagline: My great project tagline
+  tagline: we will recover
 #  actions:
 #    - theme: brand
 #      text: Markdown Examples
