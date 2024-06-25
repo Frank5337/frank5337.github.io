@@ -29,5 +29,8 @@ features:
   - title: 骑行🚴‍♀️
     details: 无聊看书, 有病骑车
     link: /cycling/index
+  - title: words🧐
+    details: 经典不可复制
+    link: /classic/transaction
 ---
 
