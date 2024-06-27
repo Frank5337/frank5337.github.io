@@ -260,6 +260,12 @@ onMounted(async () => {
         plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
       })
           .then((AMap) => {
+            AMap.plugin([
+              'AMap.ToolBar',
+            ], function(){
+              // 在图面添加工具条控件, 工具条控件只有缩放功能
+              map.addControl(new AMap.ToolBar());
+            });
             map = new AMap.Map("container", {
               zoom: 6.77,
               center: [119.355126,28.608711],
@@ -283,6 +289,7 @@ onMounted(async () => {
             layer.add(getChinaMarkers(AMap));
             // layer.add(getGlobalMarkers(AMap));
             // console.log(getGlobalMarkers(AMap));
+
           })
           .catch((e) => {
             console.log(e);
