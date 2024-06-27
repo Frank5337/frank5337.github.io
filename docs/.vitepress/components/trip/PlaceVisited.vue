@@ -274,12 +274,13 @@ onMounted(async () => {
               mapStyle: 'amap://styles/normal',
               // mapStyle: 'amap://styles/macaron',
             });
-            AMap.plugin([
-              'AMap.ToolBar',
-            ], function(){
-              // 在图面添加工具条控件, 工具条控件只有缩放功能
-              map.addControl(new AMap.ToolBar());
-            });
+            // AMap.plugin([
+            //   'AMap.ToolBar',
+            // ], function(){
+            //   // 在图面添加工具条控件, 工具条控件只有缩放功能
+            //
+            // });
+            map.addControl(new AMap.ToolBar());
             let layer = new AMap.LabelsLayer({
               zooms: [3, 20],
               zIndex: 1000,
