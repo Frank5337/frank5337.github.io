@@ -255,21 +255,30 @@ onMounted(async () => {
       aMapLoader.value = AMapLoader;
       // 使用 aMapLoader.value 来初始化地图等
       aMapLoader.value.load({
-        key: "86d5b3834c7e9dd95ac4517948ce435c", // 申请好的Web端开发者Key，首次调用 load 时必填
+        key: "61e1d2c4b067900dca2eae4ceada6f61", // 申请好的Web端开发者Key，首次调用 load 时必填
         version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
         plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
       })
           .then((AMap) => {
+
             map = new AMap.Map("container", {
-              zoom: 4.5,
-              center: [109.610747, 35.15261],
+              zoom: 6.77,
+              center: [119.355126,28.608711],
               viewMode: '3D',
               // pitch: 60,
               // mapStyle: 'amap://styles/whitesmoke',
               showIndoorMap: false,
               showLabel: false,
               // mapStyle: 'amap://styles/dark',
-              mapStyle: 'amap://styles/fresh',
+              // mapStyle: 'amap://styles/fresh',
+              mapStyle: 'amap://styles/normal',
+              // mapStyle: 'amap://styles/macaron',
+            });
+            AMap.plugin([
+              'AMap.ToolBar',
+            ], function(){
+              // 在图面添加工具条控件, 工具条控件只有缩放功能
+              map.addControl(new AMap.ToolBar());
             });
             let layer = new AMap.LabelsLayer({
               zooms: [3, 20],
@@ -283,6 +292,7 @@ onMounted(async () => {
             layer.add(getChinaMarkers(AMap));
             // layer.add(getGlobalMarkers(AMap));
             // console.log(getGlobalMarkers(AMap));
+
           })
           .catch((e) => {
             console.log(e);

@@ -1,17 +1,17 @@
-import type { ExploreRecord } from '../../../type';
+import type {ExploreRecord} from '../../../type';
 
 export const LinkChinaPrefix = '/trip/china';
 
 export const VISITED_CHINA: ExploreRecord[] = [
     {
         id: '北京', info: [
-            {
-                date: {
-                    start: new Date('2019/02/10'),
-                    end: new Date('2019/02/27')
-                },
-                intro: "求职"
-            },
+            // {
+            //     date: {
+            //         start: new Date('2019/02/10'),
+            //         end: new Date('2019/02/27')
+            //     },
+            //     intro: "求职"
+            // },
             {
                 date: {
                     start: new Date('2019/03/08'),
@@ -19,65 +19,16 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 },
                 intro: "游玩"
             },
-            {
-                date: {
-                    start: new Date('2020/02/15'),
-                },
-                intro: "北京西站-北京站转车"
-            }
+            {}
+            // {
+            //     date: {
+            //         start: new Date('2020/02/15'),
+            //     },
+            //     intro: "北京西站-北京站转车"
+            // }
         ]
     },
-    // { id: '重庆' },
-    // {
-    //     id: '香港', info: [
-    //         {
-    //             date: {
-    //                 start: new Date('2023/05/02'),
-    //             },
-    //             intro: "游玩"
-    //         },
-    //         {
-    //             date: {
-    //                 start: new Date('2023/06/28'),
-    //                 end: new Date('2023/06/29'),
-    //             },
-    //             intro: "游玩"
-    //         },
-    //         {
-    //             date: {
-    //                 start: new Date('2023/07/20'),
-    //             },
-    //             intro: "转机"
-    //         },
-    //         {
-    //             date: {
-    //                 start: new Date('2023/07/27'),
-    //             },
-    //             intro: "转机"
-    //         }, {
-    //             date: {
-    //                 start: new Date('2024/04/05'),
-    //             },
-    //             intro: "办事"
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: '澳门', info: [
-    //         {
-    //             date: {
-    //                 start: new Date('2023/05/01'),
-    //             },
-    //             intro: "游玩"
-    //         },
-    //         {
-    //             date: {
-    //                 start: new Date('2023/06/29'),
-    //             },
-    //             intro: "坐船/巴士往返香港"
-    //         },
-    //     ]
-    // },
+
     {
         id: '上海', info: [
             {
@@ -115,7 +66,9 @@ export const VISITED_CHINA: ExploreRecord[] = [
             },
         ]
     },
-    { id: '天津' },
+    {
+        id: '天津', info: [{}]
+    },
     {
         id: '福建',
         items: [
@@ -173,15 +126,61 @@ export const VISITED_CHINA: ExploreRecord[] = [
                             end: new Date('2018/04/11'),
                         },
                         intro: "游玩"
+                    },
+                    {}
+                ]
+            }
+        ]
+    },
+    {
+        id: '河北', items: [
+            {
+                id: '沧州', info: [
+                    {
+                        date: {
+                            start: new Date('2018/03/30'),
+                            end: new Date('2018/04/11'),
+                        },
+                        intro: "游玩"
                     }
                 ]
             }
         ]
     },
-    { id: '甘肃' }, {
-        id: '海南', items: [
+    {
+        id: '江西', items: [
             {
-                id: '海口', info: [
+                id: '景德镇', info: [
+                    {
+                        date: {
+                            start: new Date('2018/03/30'),
+                            end: new Date('2018/04/11'),
+                        },
+                        intro: "游玩"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '甘肃', items: [
+            {
+                id: '兰州', info: [
+                    {
+                        date: {
+                            start: new Date('2024/04/15'),
+                            end: new Date('2024/04/18'),
+                        },
+                        intro: "游玩"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '山西', items: [
+            {
+                id: '太原', info: [
                     {
                         date: {
                             start: new Date('2024/04/15'),
@@ -219,58 +218,24 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 ]
             },
             {
+                id: '佛山', info: [
+                    {
+                        date: {
+                            start: new Date('2023/04/29'),
+                            end: new Date('2023/05/01'),
+                        },
+                        intro: "游玩"
+                    },
+                ]
+            },
+            {
                 id: '深圳', info: [{
                     date: {
                         start: new Date('2023/05/01'),
                         end: new Date('2023/05/03'),
                     },
                     intro: "游玩"
-                }, {
-                    date: {
-                        start: new Date('2023/06/28'),
-                    },
-                    intro: "转车去香港"
-                }, {
-                    date: {
-                        start: new Date('2024/04/05'),
-                    },
-                    intro: "转车来回香港"
-                }]
-            }, {
-                id: '汕头', info: [{
-                    date: {
-                        start: new Date('2024/04/05'),
-                        end: new Date('2023/04/08'),
-                    },
-                    intro: "游玩"
-                }]
-            }, {
-                id: '潮州', info: [{
-                    date: {
-                        start: new Date('2024/04/08'),
-                        end: new Date('2024/04/10'),
-                    },
-                    intro: "游玩"
-                }]
-            }, {
-                id: '珠海', info: [{
-                    date: {
-                        start: new Date('2024/04/18'),
-                    },
-                    intro: "飞机转高铁"
-                }, {
-                    date: {
-                        start: new Date('2023/06/28'),
-                        end: new Date('2023/06/30'),
-                    },
-                    intro: "香港临时落脚"
-                }, {
-                    date: {
-                        start: new Date('2023/04/30'),
-                        end: new Date('2023/05/01'),
-                    },
-                    intro: "澳门临时落脚"
-                }]
+                },]
             },
         ]
     },
@@ -339,25 +304,25 @@ export const VISITED_CHINA: ExploreRecord[] = [
     //         },
     //     ]
     // },
-    {
-        id: '贵州',
-        items: [
-            {
-                id: '贵阳', info: [{
-                    date: {
-                        start: new Date('2024/04/22'),
-                    },
-                    intro: "高铁转飞机"
-                }, {
-                    date: {
-                        start: new Date('2024/04/26'),
-                        end: new Date('2024/05/01'),
-                    },
-                    intro: "游玩"
-                },]
-            },
-        ]
-    },
+    // {
+    //     id: '贵州',
+    //     items: [
+    //         {
+    //             id: '贵阳', info: [{
+    //                 date: {
+    //                     start: new Date('2024/04/22'),
+    //                 },
+    //                 intro: "高铁转飞机"
+    //             }, {
+    //                 date: {
+    //                     start: new Date('2024/04/26'),
+    //                     end: new Date('2024/05/01'),
+    //                 },
+    //                 intro: "游玩"
+    //             },]
+    //         },
+    //     ]
+    // },
     {
         id: '江苏',
         items: [
@@ -395,26 +360,24 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     intro: "游玩"
                 },]
             },
-            { id: '无锡', info: [] },
-            { id: '扬州', info: [] },
+            {id: '扬州', info: [{}]},
+            {id: '无锡', info: [{intro: "宜兴"}]},
         ]
     },
-    // {
-    //     id: '四川',
-    //     items: [
-    //         {
-    //             id: '成都',
-    //             info: [{
-    //                 date: {
-    //                     start: new Date('2020/07/28'),
-    //                     end: new Date('2021/04/28'),
-    //                 },
-    //                 intro: "工作"
-    //             },],
-    //             resident: true
-    //         },
-    //     ]
-    // },
+    {
+        id: '安徽',
+        items: [
+            {
+                id: '黄山',
+                info: [{
+                    date: {
+                        start: new Date('2020/07/28'),
+                        end: new Date('2021/04/28'),
+                    },
+                },]
+            },
+        ]
+    },
     // {
     //     id: '吉林',
     //     items: [
@@ -529,7 +492,16 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 },]
             },
             {
-                id: '湖州', info: [{}, {}]
+                id: '湖州', info: [{}]
+            },
+            {
+                id: '嘉兴', info: [{}]
+            },
+            {
+                id: '宁波', info: [{}]
+            },
+            {
+                id: '建德', info: [{}]
             },
         ]
     },

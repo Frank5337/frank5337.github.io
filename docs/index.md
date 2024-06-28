@@ -32,7 +32,7 @@ features:
   - title: words🧐
     details: 经典不可复制
     link: /classic/transaction
-  - title: 探索👀
+  - title: 我的世界迷雾🌫️
     details: 踏遍大千世界
     link: /life/trip/explore
 ---
