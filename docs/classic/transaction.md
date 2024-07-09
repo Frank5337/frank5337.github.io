@@ -8,3 +8,6 @@
 
 ### Not my business
 > This is a details block.
+
+### Stay Hungry, Stay Foolish
+> This is a details block.
