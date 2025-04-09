@@ -20,6 +20,10 @@ const sidebarInterview = () => [
     {text: 'System Design', link: '/interview/systemdesign'}
 ]
 
+const sidebarWindows = () => [
+    {text: 'Excel公式速成指南', link: '/windows/excel/Excel公式速成指南'},
+]
+
 // @ts-ignore
 // @ts-ignore
 export default defineConfig({
@@ -48,7 +52,7 @@ export default defineConfig({
             // {text: '病痛', link: '/disease/2022-12-22'},
             {text: '美剧', link: '/series/series'},
             {text: '面试', link: '/interview/java'},
-            // {text: '足球', link: '/soccer/'},
+            {text: 'Windows', link: '/windows/excel/Excel公式速成指南'},
             // {text: '自行车', link: '/soccer/'},
             // {text: '徒步', link: '/soccer/'},
             // {text: '羽毛球', link: '/soccer/'},
@@ -61,7 +65,8 @@ export default defineConfig({
 
         //侧边栏
         sidebar:
-            {
+            // [
+                {
                 // '/disease/': [
                 //     // {
                 //     //     text: 'Examples',
@@ -84,8 +89,15 @@ export default defineConfig({
                 //     }
                 // ],
                 '/interview/': sidebarInterview(),
+                '/windows/': sidebarWindows(),
 
             },
+                // {
+                //
+                //     '/windows/': sidebarWindows(),
+                //
+                //
+                // }],
 
         //https://vitepress.dev/reference/default-theme-config#sociallinks
         //社交平台link
@@ -169,4 +181,5 @@ export default defineConfig({
 //todo
 export const sidebar = {
     '/interview': sidebarInterview(),
+    '/windows': sidebarWindows(),
 }

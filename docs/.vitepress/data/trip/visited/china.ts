@@ -459,12 +459,6 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 resident: true,
                 info: [{
                     date: {
-                        start: new Date('2021/04/03'),
-                        end: new Date('2021/04/05'),
-                    },
-                    intro: "游玩"
-                }, {
-                    date: {
                         start: new Date('2021/04/28'),
                     },
                     intro: "工作"
