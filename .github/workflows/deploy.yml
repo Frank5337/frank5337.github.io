@@ -12,6 +12,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
+      contents: read  # 添加读取权限
       pages: write
       id-token: write
     environment:
@@ -31,10 +32,11 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - name: Build
         run: pnpm run docs:build
+      - name: Check build output  # 调试步骤
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
