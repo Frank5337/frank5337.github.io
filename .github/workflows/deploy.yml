@@ -32,7 +32,6 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - name: Build
         run: pnpm run docs:build
-      - name: Check build output  # 调试步骤
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v3
         with:
