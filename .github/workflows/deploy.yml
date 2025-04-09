@@ -46,4 +46,4 @@ jobs:
           ls -la docs/.vitepress/dist || echo "Directory is empty or missing!"
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
