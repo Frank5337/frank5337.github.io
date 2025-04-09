@@ -31,11 +31,19 @@ jobs:
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
       - name: Build
-        run: pnpm run docs:build
+        run: |
+          pnpm run docs:build || { echo "Build failed"; exit 1; }
+      - name: Check build output  # 添加调试：检查构建输出
+        run: |
+          ls -la docs/.vitepress/dist || echo "No build output found!"   
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
+      - name: Check artifact upload  # 添加调试：检查上传前目录
+        run: |
+          echo "Checking if artifact exists..."
+          ls -la docs/.vitepress/dist || echo "Directory is empty or missing!"
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v3
