@@ -475,6 +475,11 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         start: new Date('2023/04/22'),
                     },
                     intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2025/04/04'),
+                    },
+                    intro: "游玩"
                 },]
             },
             {
