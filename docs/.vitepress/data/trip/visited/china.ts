@@ -127,8 +127,16 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         },
                         intro: "游玩"
                     },
-                    {}
                 ]
+            },
+            {
+                id: '宝鸡', info: [
+                    {
+                        date: {
+                            start: new Date('2014/09/19'),
+                        },
+                        intro: "游玩"
+                    },]
             }
         ]
     },
@@ -183,10 +191,33 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 id: '太原', info: [
                     {
                         date: {
-                            start: new Date('2024/04/15'),
-                            end: new Date('2024/04/18'),
+                            start: new Date('2014/01/01'),
                         },
-                        intro: "游玩"
+                        intro: "考试"
+                    }
+                ]
+            },
+            {
+                id: '临汾',
+                resident: true,
+                info: [
+                    {
+                        date: {
+                            start: new Date('1996/09/08'),
+                        },
+                        intro: "常住"
+                    }
+                ]
+            },
+            {
+                id: '洪洞',
+                resident: true,
+                info: [
+                    {
+                        date: {
+                            start: new Date('1996/09/08'),
+                        },
+                        intro: "常住"
                     }
                 ]
             }
@@ -203,31 +234,33 @@ export const VISITED_CHINA: ExploreRecord[] = [
                             end: new Date('2023/05/01'),
                         },
                         intro: "游玩"
-                    }, {
-                        date: {
-                            start: new Date('2023/06/30'),
-                        },
-                        intro: "高铁转车"
-                    }, {
-                        date: {
-                            start: new Date('2024/04/04'),
-                            end: new Date('2024/04/05'),
-                        },
-                        intro: "飞机落地，高铁去hk"
                     },
+                    // {
+                    //     date: {
+                    //         start: new Date('2023/06/30'),
+                    //     },
+                    //     intro: "高铁转车"
+                    // },
+                    // {
+                    //     date: {
+                    //         start: new Date('2024/04/04'),
+                    //         end: new Date('2024/04/05'),
+                    //     },
+                    //     intro: "飞机落地，高铁去hk"
+                    // },
                 ]
             },
-            {
-                id: '佛山', info: [
-                    {
-                        date: {
-                            start: new Date('2023/04/29'),
-                            end: new Date('2023/05/01'),
-                        },
-                        intro: "游玩"
-                    },
-                ]
-            },
+            // {
+            //     id: '佛山', info: [
+            //         {
+            //             date: {
+            //                 start: new Date('2023/04/29'),
+            //                 end: new Date('2023/05/01'),
+            //             },
+            //             intro: "游玩"
+            //         },
+            //     ]
+            // },
             {
                 id: '深圳', info: [{
                     date: {
@@ -340,10 +373,11 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     intro: "游玩"
                 }, {
                     date: {
-                        start: new Date('2024/01/01'),
+                        start: new Date('2025/03/01'),
                     },
-                    intro: "送机"
-                },]
+                    intro: "游玩"
+                    },
+                ]
             },
             {
                 id: '苏州', info: [{
@@ -361,6 +395,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                 },]
             },
             {id: '扬州', info: [{}]},
+            {id: '盐城', info: [{}]},
             {id: '无锡', info: [{intro: "宜兴"}]},
         ]
     },
@@ -501,6 +536,9 @@ export const VISITED_CHINA: ExploreRecord[] = [
             },
             {
                 id: '建德', info: [{}]
+            },
+            {
+                id: '台州', info: [{}]
             },
         ]
     },
