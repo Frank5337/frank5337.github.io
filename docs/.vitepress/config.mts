@@ -23,6 +23,7 @@ const sidebarInterview = () => [
 const sidebarWindows = () => [
     {text: 'Excel公式速成指南', link: '/windows/excel/Excel公式速成指南'},
     {text: '10分钟学会数据透视表', link: '/windows/excel/10分钟学会数据透视表，让Excel自动帮你分析数据'},
+    {text: 'Excel快捷键大全.md', link: '/windows/excel/Excel快捷键大全'},
 ]
 
 // @ts-ignore
