@@ -1,5 +1,5 @@
 // @ts-ignore
-import {defineConfig} from 'vitepress'
+import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev
 
@@ -12,18 +12,28 @@ const sidebarInterview = () => [
     //         { text: '公务员区别', link: '/career/certificate/gwy-diff' },
     //     ]
     // }
-    {text: 'Java', link: '/interview/java'},
-    {text: 'Mysql', link: '/interview/mysql'},
-    {text: 'Redis', link: '/interview/redis'},
-    {text: 'Spring', link: '/interview/spring'},
-    {text: 'Message Queue', link: '/interview/mq'},
-    {text: 'System Design', link: '/interview/systemdesign'}
+    { text: 'Java', link: '/interview/java' },
+    { text: 'Mysql', link: '/interview/mysql' },
+    { text: 'Redis', link: '/interview/redis' },
+    { text: 'Spring', link: '/interview/spring' },
+    { text: 'Message Queue', link: '/interview/mq' },
+    { text: 'System Design', link: '/interview/systemdesign' },
+    {
+        text: 'Anti',
+        collapsed: false,
+        items: [
+            { text: '总览', link: '/interview/anti/' },
+            { text: 'JVM内存结构与调优', link: '/interview/anti/01_jvm_memory' },
+            { text: 'synchronized vs ReentrantLock', link: '/interview/anti/02_synchronized_vs_lock' },
+            { text: 'ThreadLocal 原理与内存泄漏', link: '/interview/anti/03_threadlocal' },
+        ]
+    }
 ]
 
 const sidebarWindows = () => [
-    {text: 'Excel公式速成指南', link: '/windows/excel/Excel公式速成指南'},
-    {text: '10分钟学会数据透视表', link: '/windows/excel/10分钟学会数据透视表，让Excel自动帮你分析数据'},
-    {text: 'Excel快捷键大全.md', link: '/windows/excel/Excel快捷键大全'},
+    { text: 'Excel公式速成指南', link: '/windows/excel/Excel公式速成指南' },
+    { text: '10分钟学会数据透视表', link: '/windows/excel/10分钟学会数据透视表，让Excel自动帮你分析数据' },
+    { text: 'Excel快捷键大全.md', link: '/windows/excel/Excel快捷键大全' },
 ]
 
 // @ts-ignore
@@ -52,9 +62,9 @@ export default defineConfig({
         nav: [
             // { text: 'Home', link: '/' },
             // {text: '病痛', link: '/disease/2022-12-22'},
-            {text: '美剧', link: '/series/series'},
-            {text: '面试', link: '/interview/java'},
-            {text: 'Windows', link: '/windows/excel/Excel公式速成指南'},
+            { text: '美剧', link: '/series/series' },
+            { text: '面试', link: '/interview/java' },
+            { text: 'Windows', link: '/windows/excel/Excel公式速成指南' },
             // {text: '自行车', link: '/soccer/'},
             // {text: '徒步', link: '/soccer/'},
             // {text: '羽毛球', link: '/soccer/'},
@@ -67,45 +77,45 @@ export default defineConfig({
 
         //侧边栏
         sidebar:
-            // [
-                {
-                // '/disease/': [
-                //     // {
-                //     //     text: 'Examples',
-                //     //     items: [
-                //     //         { text: 'Markdown Examples', link: '/markdown-examples' },
-                //     //         { text: 'Runtime API Examples', link: '/api-examples' }
-                //     //     ]
-                //     // },
-                //     {
-                //         text: '病骨支离纱帽宽',
-                //         items: [
-                //             {text: '2022-12-20 是新冠', link: '/disease/2022-12-22'},
-                //             {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
-                //             {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
-                //             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
-                //             {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
-                //             {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
-                //             {text: '2024-5-29 增强CT', link: '/disease/2024-5-29'},
-                //         ]
-                //     }
-                // ],
-                '/interview/': sidebarInterview(),
-                '/windows/': sidebarWindows(),
+        // [
+        {
+            // '/disease/': [
+            //     // {
+            //     //     text: 'Examples',
+            //     //     items: [
+            //     //         { text: 'Markdown Examples', link: '/markdown-examples' },
+            //     //         { text: 'Runtime API Examples', link: '/api-examples' }
+            //     //     ]
+            //     // },
+            //     {
+            //         text: '病骨支离纱帽宽',
+            //         items: [
+            //             {text: '2022-12-20 是新冠', link: '/disease/2022-12-22'},
+            //             {text: '2023-6-8 Twice🐏', link: '/disease/2023-6-8'},
+            //             {text: '2023-9-16 近一年+腹胀', link: '/disease/2023-9-16'},
+            //             {text: '2023-10-5 肠镜😅', link: '/disease/2023-10-5'},
+            //             {text: '2023-10-10 肌腱炎', link: '/disease/2023-10-10'},
+            //             {text: '2024-5-12 全腹CT', link: '/disease/2024-5-12'},
+            //             {text: '2024-5-29 增强CT', link: '/disease/2024-5-29'},
+            //         ]
+            //     }
+            // ],
+            '/interview/': sidebarInterview(),
+            '/windows/': sidebarWindows(),
 
-            },
-                // {
-                //
-                //     '/windows/': sidebarWindows(),
-                //
-                //
-                // }],
+        },
+        // {
+        //
+        //     '/windows/': sidebarWindows(),
+        //
+        //
+        // }],
 
         //https://vitepress.dev/reference/default-theme-config#sociallinks
         //社交平台link
         socialLinks: [
             // {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
-            {icon: 'github', link: 'https://github.com/Frank5337'}
+            { icon: 'github', link: 'https://github.com/Frank5337' }
         ],
 
         editLink: {
@@ -123,9 +133,9 @@ export default defineConfig({
             next: '下一页'
         },
 
-        lastUpdated: {text: '上次更新'},
+        lastUpdated: { text: '上次更新' },
 
-        outline: {label: '本页内容'},
+        outline: { label: '本页内容' },
 
         search: {
             provider: 'algolia',
