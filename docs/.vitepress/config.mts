@@ -36,6 +36,11 @@ const sidebarWindows = () => [
     { text: 'Excel快捷键大全.md', link: '/windows/excel/Excel快捷键大全' },
 ]
 
+const sidebarClassic = () => [
+    { text: '经典不可复制', link: '/classic/transaction' },
+    { text: '剑来', link: '/classic/jianlai' },
+]
+
 // @ts-ignore
 // @ts-ignore
 export default defineConfig({
@@ -102,6 +107,7 @@ export default defineConfig({
             // ],
             '/interview/': sidebarInterview(),
             '/windows/': sidebarWindows(),
+            '/classic/': sidebarClassic(),
 
         },
         // {
