@@ -1,0 +1,29 @@
+{
+    "index_name": "frank5337_github_io_593ct96c6r_pages",
+    "start_urls": [
+        "https://frank5337.github.io/"
+    ],
+    "sitemap_urls": [
+        "https://frank5337.github.io/sitemap.xml"
+    ],
+    "stop_urls": [],
+    "selectors": {
+        "lvl0": {
+            "selector": ".VPFooter",
+            "global": true,
+            "default_value": "Documentation"
+        },
+        "lvl1": ".vp-doc h1",
+        "lvl2": ".vp-doc h2",
+        "lvl3": ".vp-doc h3",
+        "lvl4": ".vp-doc h4",
+        "lvl5": ".vp-doc h5",
+        "text": ".vp-doc p, .vp-doc li"
+    },
+    "custom_settings": {
+        "attributesForFaceting": [
+            "lang",
+            "tags"
+        ]
+    }
+}
