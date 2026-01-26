@@ -1,0 +1,27 @@
+name: algolia
+on:
+  # 当 CI 工作流（deploy.yml）完成后触发
+  workflow_run:
+    workflows: ["CI"]
+    types: 
+      - completed
+  workflow_dispatch:
+
+jobs:
+  algolia:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Get the crawler config
+        id: get_config
+        run: |
+          echo "config=$(cat docs/crawler-config.json | jq -r tostring)" >> $GITHUB_OUTPUT
+
+      - name: Run Algolia Scraper
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.get_config.outputs.config }}
