@@ -3,9 +3,6 @@
     "start_urls": [
         "https://frank5337.github.io/"
     ],
-    "sitemap_urls": [
-        "https://frank5337.github.io/sitemap.xml"
-    ],
     "stop_urls": [],
     "selectors": {
         "lvl0": {
