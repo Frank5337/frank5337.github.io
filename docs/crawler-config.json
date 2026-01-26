@@ -15,10 +15,16 @@
         "lvl3": ".vp-doc h3",
         "lvl4": ".vp-doc h4",
         "lvl5": ".vp-doc h5",
-        "text": ".vp-doc p, .vp-doc li"
+        "text": ".vp-doc p, .vp-doc li",
+        "lang": {
+            "selector": "/html/@lang",
+            "type": "xpath",
+            "global": true
+        }
     },
     "custom_settings": {
         "attributesForFaceting": [
+            "lang",
             "tags"
         ]
     }
