@@ -10,7 +10,8 @@ on:
 jobs:
   algolia:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # 允许手动触发，或者 CI workflow 成功后自动触发
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
       
