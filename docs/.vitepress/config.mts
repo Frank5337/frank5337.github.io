@@ -152,7 +152,7 @@ export default defineConfig({
             options: {
                 appId: '593CT96C6R',
                 apiKey: '607314521f0c9bdbef2b2365903e96f3',
-                indexName: 'frank5337_github_io_593ct96c6r_pages',
+                indexName: 'frank5337io',
                 placeholder: '搜索',
                 translations: {
                     button: {
