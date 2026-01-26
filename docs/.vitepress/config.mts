@@ -52,6 +52,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     head: [
         [
+            'meta',
+            { name: 'algolia-site-verification', content: 'CB56F22243443331' }
+        ],
+        [
             'script',
             { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-9NWDZBRC0T' }
         ],
