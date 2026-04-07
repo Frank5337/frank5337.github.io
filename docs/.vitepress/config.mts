@@ -4,14 +4,6 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev
 
 const sidebarInterview = () => [
-    // { text: '其他职业', link: '/career/others' },
-    // {
-    //     text: '证书', collapsed: false, items: [
-    //         { text: '软考高级系统架构', link: '/career/certificate/ruankao-high-lv' },
-    //         { text: '教师资格证', link: '/career/certificate/ntce' },
-    //         { text: '公务员区别', link: '/career/certificate/gwy-diff' },
-    //     ]
-    // }
     { text: 'Java', link: '/interview/java' },
     { text: 'Mysql', link: '/interview/mysql' },
     { text: 'Redis', link: '/interview/redis' },
@@ -26,6 +18,18 @@ const sidebarInterview = () => [
             { text: 'JVM内存结构与调优', link: '/interview/anti/01_jvm_memory' },
             { text: 'synchronized vs ReentrantLock', link: '/interview/anti/02_synchronized_vs_lock' },
             { text: 'ThreadLocal 原理与内存泄漏', link: '/interview/anti/03_threadlocal' },
+            { text: 'JUC体系 & CAS / Atomic 原理', link: '/interview/anti/04_juc_cas_atomic' },
+            { text: 'GC 过程与 JVM 调优思路', link: '/interview/anti/05_jvm_gc_tuning' },
+            { text: 'HashMap 与 ConcurrentHashMap', link: '/interview/anti/06_hashmap_concurrenthashmap' },
+            { text: 'Spring 事务与 AOP', link: '/interview/anti/07_spring_transaction_aop' },
+            { text: 'Spring Boot 自动装配', link: '/interview/anti/08_springboot_autoconfig' },
+            { text: '分布式锁设计', link: '/interview/anti/09_distributed_lock' },
+            { text: 'RPC 与微服务治理', link: '/interview/anti/10_rpc_microservice' },
+            { text: '分布式事务与最终一致性', link: '/interview/anti/11_distributed_transaction' },
+            { text: 'MySQL 与 Redis 双写一致性', link: '/interview/anti/12_mysql_redis_consistency' },
+            { text: '缓存穿透、击穿、雪崩', link: '/interview/anti/13_redis_cache_problems' },
+            { text: '秒杀系统设计', link: '/interview/anti/14_seckill_system' },
+            { text: '站内信 / 消息通知系统设计', link: '/interview/anti/15_message_notification_system' },
         ]
     }
 ]
