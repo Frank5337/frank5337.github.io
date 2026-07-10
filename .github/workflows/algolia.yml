@@ -1,28 +1,9 @@
-name: algolia
-on:
-  # Trigger after the CI workflow (deploy.yml) completes
-  workflow_run:
-    workflows: ["CI"]
-    types: 
-      - completed
-  workflow_dispatch:
-
-jobs:
-  algolia:
-    runs-on: ubuntu-latest
-    # Allow manual runs or automatic runs after CI succeeds
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      - uses: actions/checkout@v5
-      
-      - name: Get the crawler config
-        id: get_config
-        run: |
-          echo "config=$(cat docs/crawler-config.json | jq -r tostring)" >> $GITHUB_OUTPUT
-
-      - name: Run Algolia Scraper
-        uses: signcl/docsearch-scraper-action@master
-        env:
-          APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
-          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-          CONFIG: ${{ steps.get_config.outputs.config }}
+- name: Algolia crawler creation and crawl
+  uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
+  id: algolia_crawler
+  with: # mandatory parameters
+    crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
+    crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
+    algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
+    algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
+    site-url: 'https://frank5337.github.io/'
