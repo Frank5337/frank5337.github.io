@@ -1,6 +1,6 @@
 name: algolia
 on:
-  # 当 CI 工作流（deploy.yml）完成后触发
+  # Trigger after the CI workflow (deploy.yml) completes
   workflow_run:
     workflows: ["CI"]
     types: 
@@ -10,10 +10,10 @@ on:
 jobs:
   algolia:
     runs-on: ubuntu-latest
-    # 允许手动触发，或者 CI workflow 成功后自动触发
+    # Allow manual runs or automatic runs after CI succeeds
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       
       - name: Get the crawler config
         id: get_config

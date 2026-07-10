@@ -12,20 +12,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read  # 添加读取权限
+      contents: read  # Required for repository checkout
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - uses: pnpm/action-setup@v2
         with:
           version: 7
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v5
         with:
           node-version: 18
           cache: pnpm
@@ -33,14 +33,14 @@ jobs:
       - name: Build
         run: |
           pnpm run docs:build || { echo "Build failed"; exit 1; }
-      - name: Check build output  # 添加调试：检查构建输出
+      - name: Check build output  # Debug build output
         run: |
           ls -la docs/.vitepress/dist || echo "No build output found!"   
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-      - name: Check artifact upload  # 添加调试：检查上传前目录
+      - name: Check artifact upload  # Debug artifact contents before upload
         run: |
           echo "Checking if artifact exists..."
           ls -la docs/.vitepress/dist || echo "Directory is empty or missing!"
