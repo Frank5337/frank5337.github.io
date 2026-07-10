@@ -154,8 +154,8 @@ export default defineConfig({
         search: {
             provider: 'algolia',
             options: {
-                appId: '593CT96C6R',
-                apiKey: '607314521f0c9bdbef2b2365903e96f3',
+                appId: 'QRRJFWKYC6',
+                apiKey: '377cb9f651c2b961a534dd611f42c988',
                 indexName: 'frank5337io',
                 placeholder: '搜索',
                 translations: {
