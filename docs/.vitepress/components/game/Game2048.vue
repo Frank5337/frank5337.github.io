@@ -4,14 +4,11 @@ import { computed, nextTick, onMounted, ref } from 'vue'
 type Direction = 'left' | 'right' | 'up' | 'down'
 type GameStatus = 'playing' | 'won' | 'lost'
 
-interface GameSnapshot {
+interface SavedGame {
   board: number[]
   score: number
   moves: number
   status: GameStatus
-}
-
-interface SavedGame extends GameSnapshot {
   bestScore: number
   hasWon: boolean
 }
@@ -27,11 +24,9 @@ const bestScore = ref(0)
 const moves = ref(0)
 const status = ref<GameStatus>('playing')
 const hasWon = ref(false)
-const previous = ref<GameSnapshot | null>(null)
 const boardElement = ref<HTMLElement | null>(null)
 const touchStart = ref<{ x: number; y: number } | null>(null)
 
-const canUndo = computed(() => previous.value !== null && status.value === 'playing')
 const statusTitle = computed(() => status.value === 'won' ? '合成 2048！' : '本局结束')
 const statusMessage = computed(() => status.value === 'won'
   ? '漂亮！你可以继续挑战更大的数字。'
@@ -100,7 +95,6 @@ function newGame() {
   moves.value = 0
   status.value = 'playing'
   hasWon.value = false
-  previous.value = null
   persist()
   focusBoard()
 }
@@ -150,12 +144,6 @@ function hasAvailableMove(target: number[]) {
 function move(direction: Direction) {
   if (status.value !== 'playing') return
 
-  const before: GameSnapshot = {
-    board: [...board.value],
-    score: score.value,
-    moves: moves.value,
-    status: status.value,
-  }
   const next = Array(CELL_COUNT).fill(0)
   let gained = 0
 
@@ -170,7 +158,6 @@ function move(direction: Direction) {
 
   if (next.every((value, index) => value === board.value[index])) return
 
-  previous.value = before
   addRandomTile(next)
   board.value = next
   score.value += gained
@@ -184,18 +171,6 @@ function move(direction: Direction) {
     status.value = 'lost'
   }
   persist()
-}
-
-function undo() {
-  if (!canUndo.value || !previous.value) return
-  const snapshot = previous.value
-  board.value = [...snapshot.board]
-  score.value = snapshot.score
-  moves.value = snapshot.moves
-  status.value = snapshot.status
-  previous.value = null
-  persist()
-  focusBoard()
 }
 
 function continueGame() {
@@ -234,6 +209,10 @@ function handleTouchEnd(event: TouchEvent) {
   else move(deltaY > 0 ? 'down' : 'up')
 }
 
+function handleTouchCancel() {
+  touchStart.value = null
+}
+
 function tileClass(value: number) {
   return value > 2048 ? 'tile-super' : `tile-${value}`
 }
@@ -268,7 +247,6 @@ onMounted(() => {
     <div class="toolbar">
       <p>已移动 <strong>{{ moves }}</strong> 步</p>
       <div class="actions">
-        <button class="button button-secondary" type="button" :disabled="!canUndo" @click="undo">撤销一步</button>
         <button class="button button-primary" type="button" @click="newGame">新游戏</button>
       </div>
     </div>
@@ -281,7 +259,9 @@ onMounted(() => {
       aria-label="2048 游戏棋盘。使用方向键或 WASD 移动方块。"
       @keydown="handleKeydown"
       @touchstart="handleTouchStart"
+      @touchmove.prevent
       @touchend="handleTouchEnd"
+      @touchcancel="handleTouchCancel"
     >
       <div
         v-for="(value, index) in board"
@@ -429,6 +409,8 @@ h1 {
   background: var(--game-board);
   border-radius: 18px;
   touch-action: none;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -493,12 +475,37 @@ h1 {
 @keyframes overlay-in { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 600px) {
-  .game-shell { margin: 8px auto 32px; padding: 18px; border-radius: 22px; }
-  .game-header { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .scoreboard { width: 100%; }
-  .toolbar { align-items: flex-start; flex-direction: column; margin-top: 20px; }
-  .actions { width: 100%; }
-  .actions .button { flex: 1; }
+  .game-shell {
+    position: fixed;
+    inset: var(--vp-nav-height, 64px) 0 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    margin: 0;
+    padding: 12px max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+
+  .game-header { align-items: flex-end; gap: 12px; }
+  .eyebrow { font-size: 11px; }
+  h1 { font-size: 54px; }
+  .intro { display: none; }
+  .scoreboard { grid-template-columns: repeat(2, minmax(68px, 1fr)); }
+  .score-card { min-width: 68px; padding: 6px 8px; border-radius: 10px; }
+  .score-card strong { font-size: 18px; }
+  .toolbar { margin: 10px 0; }
+  .board {
+    width: min(100%, calc(100dvh - var(--vp-nav-height, 64px) - 175px));
+    max-width: 500px;
+    align-self: center;
+  }
+  .instructions { margin-top: 8px; }
   .desktop-hint { display: none; }
   .mobile-hint { display: inline; }
 }
