@@ -78,6 +78,7 @@ export default defineConfig({
             { text: '美剧', link: '/series/series' },
             { text: '面试', link: '/interview/java' },
             { text: 'Windows', link: '/windows/excel/Excel公式速成指南' },
+            { text: '2048', link: '/game/2048' },
             // {text: '自行车', link: '/soccer/'},
             // {text: '徒步', link: '/soccer/'},
             // {text: '羽毛球', link: '/soccer/'},
