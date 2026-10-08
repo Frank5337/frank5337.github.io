@@ -1,0 +1,31 @@
+{
+    "index_name": "frank5337io",
+    "start_urls": [
+        "https://frank5337.github.io/"
+    ],
+    "stop_urls": [],
+    "selectors": {
+        "lvl0": {
+            "selector": ".VPNavBarTitle .title",
+            "global": true,
+            "default_value": "Franklin's World"
+        },
+        "lvl1": ".vp-doc h1",
+        "lvl2": ".vp-doc h2",
+        "lvl3": ".vp-doc h3",
+        "lvl4": ".vp-doc h4",
+        "lvl5": ".vp-doc h5",
+        "text": ".vp-doc p, .vp-doc li",
+        "lang": {
+            "selector": "/html/@lang",
+            "type": "xpath",
+            "global": true
+        }
+    },
+    "custom_settings": {
+        "attributesForFaceting": [
+            "lang",
+            "tags"
+        ]
+    }
+}

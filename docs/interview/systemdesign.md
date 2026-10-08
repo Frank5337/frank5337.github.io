@@ -1,19 +1,12 @@
 # 系统设计
-- 最近一个小时内访问频率最高的10个IP
-    ```
-    实时输出最近一个小时内访问频率最高的10个IP，要求：
-    
-    实时输出
-    从当前时间向前数的1个小时
-    QPS可能会达到10W/s
-    ```
-- 短网址系统(TinyURL)
-    ```
-    如何设计一个短网址服务(TinyURL)？
-    
-    使用场景(Scenario)
-    微博和Twitter都有140字数的限制，如果分享一个长网址，很容易就超出限制，发布出去。短网址服务可以把一个长网址变成短网址，方便在社交网络上传播。
-    
-    需求(Needs)
-    很显然，要尽可能的短。长度设计为多少才合适呢？
-    ```
+
+## 面试题列表
+
+1. [最近一个小时内访问频率最高的10个IP](./systemdesign/01_top10_ip.md)
+2. [短网址系统(TinyURL)](./systemdesign/02_tinyurl.md)
+3. [如何设计一个秒杀系统](./systemdesign/03_seckill.md)
+4. [如何设计一个分布式ID生成器](./systemdesign/04_distributed_id.md)
+5. [如何设计一个排行榜系统](./systemdesign/05_leaderboard.md)
+6. [如何设计一个延迟消息系统](./systemdesign/06_delay_message.md)
+7. [如何设计一个高并发签到/点赞系统](./systemdesign/07_checkin_like.md)
+8. [如何设计一个用户消息通知系统](./systemdesign/08_notification.md)

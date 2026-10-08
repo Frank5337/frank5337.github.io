@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Error Triage"
+  short_description: "排查后端接口报错、配置异常和依赖调用故障。"
+  default_prompt: "Use $api-error-triage to diagnose this backend API failure and propose the smallest safe fix."
